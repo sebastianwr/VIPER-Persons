@@ -12,7 +12,7 @@ class PersonListInteractor : NSObject {
 
     let dataManager : PersonDataStore
     
-    weak var delegate : PersonListPresenter?
+    weak var delegate : PersonListInteractorOutput?
     
     init(dataManager: PersonDataStore) {
         self.dataManager = dataManager

@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-class PersonListPresenter : NSObject {
+class PersonListPresenter: PersonListInteractorOutput {
     
     var interactor : PersonListInteractor?
     weak var listWireframe : PersonListWireframe?
     weak var userInterface : PersonListViewController?
+    
+    init() {
+        
+    }
     
     func updateView() {
         self.interactor?.findAllPersons()

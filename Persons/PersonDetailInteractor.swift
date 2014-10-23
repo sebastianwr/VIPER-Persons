@@ -8,9 +8,9 @@
 
 import Foundation
 
-class PersonDetailInteractor {
+class PersonDetailInteractor: PersonDetailInteractorInput {
     
-    weak var delegate : PersonDetailPresenter?
+    weak var delegate : PersonDetailInteractorOutput?
     
     let dataManager : PersonDataStore
     
