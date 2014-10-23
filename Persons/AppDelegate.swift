@@ -3,7 +3,7 @@
 //  Persons
 //
 //  Created by Sebastian Wramba on 22.10.14.
-//  Copyright (c) 2014 babiel GmbH. All rights reserved.
+//  Copyright (c) 2014 Sebastian Wramba. All rights reserved.
 //
 
 import UIKit
@@ -21,5 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDependencies.installRootViewControllerIntoWindow(window!)
         
         return true
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        MagicalRecord.cleanUp()
     }
 }

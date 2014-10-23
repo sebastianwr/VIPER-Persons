@@ -3,7 +3,7 @@
 //  MdB
 //
 //  Created by Sebastian Wramba on 01.10.14.
-//  Copyright (c) 2014 babiel GmbH. All rights reserved.
+//  Copyright (c) 2014 Sebastian Wramba. All rights reserved.
 //
 
 import Foundation
