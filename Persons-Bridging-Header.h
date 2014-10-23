@@ -6,10 +6,7 @@
 //  Copyright (c) 2014 Sebastian Wramba. All rights reserved.
 //
 
-#ifndef Persons_Persons_Bridging_Header_h
-#define Persons_Persons_Bridging_Header_h
-
 #define MR_SHORTHAND
 #import "CoreData+MagicalRecord.h"
 
-#endif
+#import "Typhoon.h"

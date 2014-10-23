@@ -33,6 +33,7 @@
 		DA102F2319F8F7C70042DBBF /* NSDateConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2219F8F7C70042DBBF /* NSDateConvenience.swift */; };
 		DA102F2719F900A60042DBBF /* PersonDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2619F900A60042DBBF /* PersonDataStore.swift */; };
 		DA102F2919F9036C0042DBBF /* PersonCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2819F9036C0042DBBF /* PersonCoreDataStore.swift */; };
+		DA102F3019F93A4B0042DBBF /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2F19F93A4B0042DBBF /* ApplicationAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		DA102F2219F8F7C70042DBBF /* NSDateConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateConvenience.swift; sourceTree = "<group>"; };
 		DA102F2619F900A60042DBBF /* PersonDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDataStore.swift; sourceTree = "<group>"; };
 		DA102F2819F9036C0042DBBF /* PersonCoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCoreDataStore.swift; sourceTree = "<group>"; };
+		DA102F2F19F93A4B0042DBBF /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		E150D9748D599B805672CF8C /* Pods-Persons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Persons/Pods-Persons.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 		DA102EC619F7FF220042DBBF /* Persons */ = {
 			isa = PBXGroup;
 			children = (
+				DA102F2E19F93A3E0042DBBF /* Assembly */,
 				DA102EF819F8096A0042DBBF /* Modules */,
 				DA102EEC19F7FFDA0042DBBF /* Common */,
 				DA102EC919F7FF220042DBBF /* AppDelegate.swift */,
@@ -307,6 +310,14 @@
 			name = "Data Store";
 			sourceTree = "<group>";
 		};
+		DA102F2E19F93A3E0042DBBF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				DA102F2F19F93A4B0042DBBF /* ApplicationAssembly.swift */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +457,7 @@
 				DA102F0C19F809770042DBBF /* PersonDetailWireframe.swift in Sources */,
 				DA102F0819F809770042DBBF /* PersonDetailInteractor.swift in Sources */,
 				DA102F2919F9036C0042DBBF /* PersonCoreDataStore.swift in Sources */,
+				DA102F3019F93A4B0042DBBF /* ApplicationAssembly.swift in Sources */,
 				DA102F0A19F809770042DBBF /* PersonDetailViewController.swift in Sources */,
 				DA102F1219F809770042DBBF /* PersonListViewController.swift in Sources */,
 				DA102F0B19F809770042DBBF /* PersonDetailViewModel.swift in Sources */,

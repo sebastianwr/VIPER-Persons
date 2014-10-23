@@ -15,6 +15,8 @@ class AppDependencies {
     var detailWireframe = PersonDetailWireframe()
     var personCoreDataStore = PersonCoreDataStore()
     
+    var personListInteractor : PersonListInteractor?
+    
     init() {
         initCoreData()
         initCoreDataSeed()
@@ -28,11 +30,10 @@ class AppDependencies {
     func configureDependencies() {
         
         let personListPresenter = PersonListPresenter()
-        let personListInteractor = PersonListInteractor(dataManager: personCoreDataStore)
         
         let rootWireframe = RootWireframe()
         
-        personListInteractor.delegate = personListPresenter
+        personListInteractor?.delegate = personListPresenter
         personListPresenter.interactor = personListInteractor
         personListPresenter.listWireframe = listWireframe
         

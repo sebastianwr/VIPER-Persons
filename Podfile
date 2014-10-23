@@ -5,6 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Persons' do
  pod 'MagicalRecord', :head
+ pod 'Typhoon', :head
 end
 
 target 'PersonsTests' do
