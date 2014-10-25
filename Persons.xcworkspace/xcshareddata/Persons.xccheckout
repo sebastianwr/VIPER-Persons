@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1818EF1B-115F-4D7B-871C-3955A8038657</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Persons</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>355E16C269A203BFFCCD73927C86EFDB2563A678</key>
+		<string>github.com:sebastianwr/VIPER-Persons.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Persons.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>355E16C269A203BFFCCD73927C86EFDB2563A678</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:sebastianwr/VIPER-Persons.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>355E16C269A203BFFCCD73927C86EFDB2563A678</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>355E16C269A203BFFCCD73927C86EFDB2563A678</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VIPER-Persons</string>
+		</dict>
+	</array>
+</dict>
+</plist>
