@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonListInteractor : NSObject {
+class PersonListInteractor : PersonListInteractorInput {
 
     let dataManager : PersonDataStore
     
