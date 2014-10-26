@@ -9,13 +9,14 @@
 import Foundation
 import UIKit
 
-class AppDependencies {
+class AppDependencies: NSObject {
     
     var listWireframe = PersonListWireframe()
     var detailWireframe = PersonDetailWireframe()
     var personCoreDataStore = PersonCoreDataStore()
     
-    init() {
+    override init() {
+        super.init()
         initCoreData()
         initCoreDataSeed()
         configureDependencies()

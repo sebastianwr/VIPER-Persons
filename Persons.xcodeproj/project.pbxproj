@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C6E020DCE8647508057C7CC /* libPods-Persons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F4384A5F893E26B0CBDC45 /* libPods-Persons.a */; };
+		5613B3C119FC0A590093D197 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613B3C019FC0A590093D197 /* ApplicationAssembly.swift */; };
+		5926953E67A191F8ABDF9104 /* libPods-Persons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BEFFF43088AB690A688A18 /* libPods-Persons.a */; };
 		DA102ECA19F7FF220042DBBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102EC919F7FF220042DBBF /* AppDelegate.swift */; };
 		DA102ECD19F7FF220042DBBF /* Persons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA102ECB19F7FF220042DBBF /* Persons.xcdatamodeld */; };
 		DA102ED419F7FF220042DBBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA102ED319F7FF220042DBBF /* Images.xcassets */; };
@@ -48,8 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4BA5272E4F0DEE62F51B1F21 /* Pods-Persons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persons.release.xcconfig"; path = "Pods/Target Support Files/Pods-Persons/Pods-Persons.release.xcconfig"; sourceTree = "<group>"; };
-		98F4384A5F893E26B0CBDC45 /* libPods-Persons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Persons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42BEFFF43088AB690A688A18 /* libPods-Persons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Persons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5613B3C019FC0A590093D197 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		58FADDE2700C7C507611F26C /* Pods-Persons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Persons/Pods-Persons.debug.xcconfig"; sourceTree = "<group>"; };
 		DA102EC419F7FF220042DBBF /* Persons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA102EC819F7FF220042DBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA102EC919F7FF220042DBBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +84,7 @@
 		DA102F2819F9036C0042DBBF /* PersonCoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCoreDataStore.swift; sourceTree = "<group>"; };
 		DA102F2A19F91E9B0042DBBF /* PersonListInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListInteractorIO.swift; sourceTree = "<group>"; };
 		DA102F2C19F9204E0042DBBF /* PersonDetailInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailInteractorIO.swift; sourceTree = "<group>"; };
-		E150D9748D599B805672CF8C /* Pods-Persons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Persons/Pods-Persons.debug.xcconfig"; sourceTree = "<group>"; };
+		E6928C8C1DED89665480B7B2 /* Pods-Persons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persons.release.xcconfig"; path = "Pods/Target Support Files/Pods-Persons/Pods-Persons.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C6E020DCE8647508057C7CC /* libPods-Persons.a in Frameworks */,
+				5926953E67A191F8ABDF9104 /* libPods-Persons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,21 +106,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		175F8F06DB6AC23B51846A11 /* Pods */ = {
+		2C8D7AD3B24D25BA5FBFA57F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E150D9748D599B805672CF8C /* Pods-Persons.debug.xcconfig */,
-				4BA5272E4F0DEE62F51B1F21 /* Pods-Persons.release.xcconfig */,
+				42BEFFF43088AB690A688A18 /* libPods-Persons.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C8CB9D0B94F7209F69A12AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58FADDE2700C7C507611F26C /* Pods-Persons.debug.xcconfig */,
+				E6928C8C1DED89665480B7B2 /* Pods-Persons.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		2C8D7AD3B24D25BA5FBFA57F /* Frameworks */ = {
+		5613B3BF19FC0A320093D197 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				98F4384A5F893E26B0CBDC45 /* libPods-Persons.a */,
+				5613B3C019FC0A590093D197 /* ApplicationAssembly.swift */,
 			);
-			name = Frameworks;
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 		DA102EBB19F7FF220042DBBF = {
@@ -128,8 +138,8 @@
 				DA102EC619F7FF220042DBBF /* Persons */,
 				DA102EDF19F7FF220042DBBF /* PersonsTests */,
 				DA102EC519F7FF220042DBBF /* Products */,
-				175F8F06DB6AC23B51846A11 /* Pods */,
 				2C8D7AD3B24D25BA5FBFA57F /* Frameworks */,
+				3C8CB9D0B94F7209F69A12AE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +155,7 @@
 		DA102EC619F7FF220042DBBF /* Persons */ = {
 			isa = PBXGroup;
 			children = (
+				5613B3BF19FC0A320093D197 /* Assembly */,
 				DA102EF819F8096A0042DBBF /* Modules */,
 				DA102EEC19F7FFDA0042DBBF /* Common */,
 				DA102EC919F7FF220042DBBF /* AppDelegate.swift */,
@@ -222,8 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				DA102F2419F9008F0042DBBF /* Person Common */,
-				DA102F1519F8097B0042DBBF /* Person Details */,
 				DA102F1619F809850042DBBF /* Person List */,
+				DA102F1519F8097B0042DBBF /* Person Details */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -464,6 +475,7 @@
 				DA102F1019F809770042DBBF /* PersonListInteractor.swift in Sources */,
 				DA102ECD19F7FF220042DBBF /* Persons.xcdatamodeld in Sources */,
 				DA102F1319F809770042DBBF /* PersonListViewModel.swift in Sources */,
+				5613B3C119FC0A590093D197 /* ApplicationAssembly.swift in Sources */,
 				DA102EF019F800680042DBBF /* ManagedPerson.swift in Sources */,
 				DA102ECA19F7FF220042DBBF /* AppDelegate.swift in Sources */,
 				DA102F1419F809770042DBBF /* PersonListWireframe.swift in Sources */,
@@ -585,7 +597,7 @@
 		};
 		DA102EE719F7FF220042DBBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E150D9748D599B805672CF8C /* Pods-Persons.debug.xcconfig */;
+			baseConfigurationReference = 58FADDE2700C7C507611F26C /* Pods-Persons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Persons/Info.plist;
@@ -598,7 +610,7 @@
 		};
 		DA102EE819F7FF220042DBBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BA5272E4F0DEE62F51B1F21 /* Pods-Persons.release.xcconfig */;
+			baseConfigurationReference = E6928C8C1DED89665480B7B2 /* Pods-Persons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Persons/Info.plist;

@@ -2,11 +2,16 @@ PODS:
   - MagicalRecord (HEAD based on 2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (HEAD based on 2.2)
+  - Typhoon (HEAD based on 2.3.0):
+    - Typhoon/no-arc
+  - Typhoon/no-arc (HEAD based on 2.3.0)
 
 DEPENDENCIES:
   - MagicalRecord (HEAD)
+  - Typhoon (HEAD)
 
 SPEC CHECKSUMS:
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  Typhoon: ee9b8c034b11746f8024a0487965c04965a6a4ee
 
 COCOAPODS: 0.34.4
