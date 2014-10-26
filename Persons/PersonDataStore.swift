@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PersonDataStore {
+@objc protocol PersonDataStore {
     
     func findPersonWithId(remoteId: String, completionBlock: ((Person) -> Void)!)
     func findAll(completionBlock: (([Person]) -> Void)!)

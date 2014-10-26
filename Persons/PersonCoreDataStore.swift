@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonCoreDataStore: PersonDataStore {
+class PersonCoreDataStore: NSObject, PersonDataStore {
 
     func findPersonWithId(remoteId: String, completionBlock: ((Person) -> Void)!) {
         let results = ManagedPerson.MR_findByAttribute("remoteId", withValue: remoteId) as [ManagedPerson]

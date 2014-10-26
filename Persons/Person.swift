@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Person {
+class Person: NSObject {
     
     let birthday: NSDate
     let photoUrl: String
