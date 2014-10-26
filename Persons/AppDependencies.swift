@@ -13,7 +13,12 @@ class AppDependencies: NSObject {
     
     var listWireframe = PersonListWireframe()
     var detailWireframe = PersonDetailWireframe()
+    
     var personDataStore: PersonDataStore?
+    
+    var personListInteractor: PersonListInteractor?
+
+    var personDetailInteractor: PersonDetailInteractor?
     
     func initialSetup() {
         initCoreData()
@@ -28,12 +33,11 @@ class AppDependencies: NSObject {
     func configureDependencies() {
         
         let personListPresenter = PersonListPresenter()
-        let personListInteractor = PersonListInteractor(dataManager: personDataStore!)
         
         let rootWireframe = RootWireframe()
         
-        personListInteractor.delegate = personListPresenter
-        personListPresenter.interactor = personListInteractor
+        personListInteractor!.delegate = personListPresenter
+        personListPresenter.interactor = personListInteractor!
         personListPresenter.listWireframe = listWireframe
         
         listWireframe.rootWireframe = rootWireframe
@@ -41,10 +45,9 @@ class AppDependencies: NSObject {
         listWireframe.detailWireframe = detailWireframe
         
         let personDetailPresenter = PersonDetailPresenter()
-        let personDetailInteractor = PersonDetailInteractor(dataManager: personDataStore!)
         
-        personDetailInteractor.delegate = personDetailPresenter
-        personDetailPresenter.interactor = personDetailInteractor
+        personDetailInteractor!.delegate = personDetailPresenter
+        personDetailPresenter.interactor = personDetailInteractor!
         
         detailWireframe.presenter = personDetailPresenter
         

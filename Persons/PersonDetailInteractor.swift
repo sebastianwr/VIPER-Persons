@@ -8,18 +8,18 @@
 
 import Foundation
 
-class PersonDetailInteractor: PersonDetailInteractorInput {
+class PersonDetailInteractor: NSObject, PersonDetailInteractorInput {
     
     weak var delegate : PersonDetailInteractorOutput?
     
-    let dataManager : PersonDataStore
+    let dataStore : PersonDataStore
     
-    init(dataManager: PersonDataStore) {
-        self.dataManager = dataManager
+    init(dataStore: PersonDataStore) {
+        self.dataStore = dataStore
     }
     
     func findPersonForId(id: String) {
-        self.dataManager.findPersonWithId(id, completionBlock: { person in
+        dataStore.findPersonWithId(id, completionBlock: { person in
             self.delegate?.foundPerson(person)
             return
         })

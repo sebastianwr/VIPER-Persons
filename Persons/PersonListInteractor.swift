@@ -8,18 +8,18 @@
 
 import Foundation
 
-class PersonListInteractor : PersonListInteractorInput {
+class PersonListInteractor : NSObject, PersonListInteractorInput {
 
-    let dataManager : PersonDataStore
+    let dataStore : PersonDataStore
     
     weak var delegate : PersonListInteractorOutput?
     
-    init(dataManager: PersonDataStore) {
-        self.dataManager = dataManager
+    init(dataStore: PersonDataStore) {
+        self.dataStore = dataStore
     }
     
     func findAllPersons() {
-        dataManager.findAll( { persons in
+        dataStore.findAll( { persons in
             self.delegate?.foundAllPersons(persons)
             return
         })

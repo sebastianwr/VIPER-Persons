@@ -21,7 +21,30 @@ class ApplicationAssembly: TyphoonAssembly {
         return TyphoonDefinition.withClass(AppDependencies.self) {
             (definition) in
             definition.injectProperty("personDataStore", with: self.personDataStore())
+            definition.injectProperty("personListInteractor", with: self.personListInteractor())
+            definition.injectProperty("personDetailInteractor", with: self.personDetailInteractor())
+            
             definition.afterInjections = "initialSetup"
+        }
+    }
+    
+    dynamic func personListInteractor() -> AnyObject {
+        return TyphoonDefinition.withClass(PersonListInteractor.self) {
+            (definition) in
+            definition.useInitializer("initWithDataStore:") {
+                (initializer) in
+                initializer.injectParameterWith(self.personDataStore())
+            }
+        }
+    }
+    
+    dynamic func personDetailInteractor() -> AnyObject {
+        return TyphoonDefinition.withClass(PersonDetailInteractor.self) {
+            (definition) in
+            definition.useInitializer("initWithDataStore:") {
+                (initializer) in
+                initializer.injectParameterWith(self.personDataStore())
+            }
         }
     }
     
