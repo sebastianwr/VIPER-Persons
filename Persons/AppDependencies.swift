@@ -11,12 +11,14 @@ import UIKit
 
 class AppDependencies: NSObject {
     
-    var listWireframe = PersonListWireframe()
+
     var detailWireframe = PersonDetailWireframe()
     
     var personDataStore: PersonDataStore?
     
     var personListInteractor: PersonListInteractor?
+    var personListWireframe: PersonListWireframe?
+    var personListPresenter: PersonListPresenter?
 
     var personDetailInteractor: PersonDetailInteractor?
     
@@ -27,25 +29,17 @@ class AppDependencies: NSObject {
     }
     
     func installRootViewControllerIntoWindow(window: UIWindow) {
-        listWireframe.presentListInterfaceFromWindow(window)
+        personListWireframe!.presentListInterfaceFromWindow(window)
     }
     
     func configureDependencies() {
         
-        let personListPresenter = PersonListPresenter()
-        
         let rootWireframe = RootWireframe()
         
-        personListInteractor!.delegate = personListPresenter
-        personListPresenter.interactor = personListInteractor!
-        personListPresenter.listWireframe = listWireframe
-        
-        listWireframe.rootWireframe = rootWireframe
-        listWireframe.listPresenter = personListPresenter
-        listWireframe.detailWireframe = detailWireframe
+        personListWireframe!.rootWireframe = rootWireframe
+        personListWireframe!.detailWireframe = detailWireframe
         
         let personDetailPresenter = PersonDetailPresenter()
-        
         personDetailInteractor!.delegate = personDetailPresenter
         personDetailPresenter.interactor = personDetailInteractor!
         
@@ -72,7 +66,7 @@ class AppDependencies: NSObject {
             
             
             
-            var managedPerson1: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
+            let managedPerson1: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
             managedPerson1.firstName = "Peter"
             managedPerson1.lastName = "Jackson"
             managedPerson1.occupation = "Director"
@@ -81,7 +75,7 @@ class AppDependencies: NSObject {
             managedPerson1.shortBio = "Peter Jackson was born as an only child in a small coast-side town in New Zealand in 1961. When a friend of his parents bought him a super 8 movie camera (because she saw how much he enjoyed taking photos), the then eight-year-old Peter instantly grabbed the thing to start recording his own movies, which he made with his friends."
             managedPerson1.birthday = NSDate(dateString: "1961-10-31")
             
-            var managedPerson2: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
+            let managedPerson2: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
             managedPerson2.firstName = "Jason"
             managedPerson2.lastName = "Statham"
             managedPerson2.occupation = "Actor"
@@ -90,7 +84,7 @@ class AppDependencies: NSObject {
             managedPerson2.shortBio = "Jason Statham was born in Shirebrook, Derbyshire, to Eileen (Yates), a dancer, and Barry Statham, a street merchant and lounge singer. Statham has done quite a lot in a short time. He has been a Diver on the British National Diving Team and finished 12th in the World Championships in 1992."
             managedPerson2.birthday = NSDate(dateString: "1967-07-26")
             
-            var managedPerson3: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
+            let managedPerson3: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
             managedPerson3.firstName = "Hugh"
             managedPerson3.lastName = "Jackman"
             managedPerson3.occupation = "Actor"
@@ -99,7 +93,7 @@ class AppDependencies: NSObject {
             managedPerson3.shortBio = "Hugh Jackman was born in Sydney, New South Wales, to Grace McNeil (Greenwood) and Christopher John Jackman, an accountant. He is the youngest of five children. His parents, both English, moved to Australia shortly before his birth, and one of his paternal great-grandfathers was Greek."
             managedPerson3.birthday = NSDate(dateString: "1968-10-12")
             
-            var managedPerson4: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
+            let managedPerson4: ManagedPerson = ManagedPerson.MR_createEntity() as ManagedPerson
             managedPerson4.firstName = "Jennifer"
             managedPerson4.lastName = "Lawrence"
             managedPerson4.occupation = "Actress"

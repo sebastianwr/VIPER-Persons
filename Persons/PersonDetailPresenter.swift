@@ -9,12 +9,10 @@
 import Foundation
 import UIKit
 
-class PersonDetailPresenter : PersonDetailInteractorOutput {
+class PersonDetailPresenter : NSObject, PersonDetailInteractorOutput {
     
     var interactor : PersonDetailInteractorInput?
     weak var userInterface : PersonDetailViewController?
-    
-    init() {}
     
     func configureViewForPersonWithId(viewController: PersonDetailViewController, id: String) {
         self.userInterface = viewController

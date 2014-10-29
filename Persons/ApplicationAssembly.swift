@@ -21,22 +21,51 @@ class ApplicationAssembly: TyphoonAssembly {
         return TyphoonDefinition.withClass(AppDependencies.self) {
             (definition) in
             definition.injectProperty("personDataStore", with: self.personDataStore())
+
+            definition.injectProperty("personListWireframe", with: self.personListWireframe())
             definition.injectProperty("personListInteractor", with: self.personListInteractor())
+            definition.injectProperty("personListPresenter", with: self.personListPresenter())
+            
             definition.injectProperty("personDetailInteractor", with: self.personDetailInteractor())
+
             
             definition.afterInjections = "initialSetup"
+        }
+    }
+    
+    // MARK: - Person List Module
+    
+    dynamic func personListWireframe() -> AnyObject {
+        return TyphoonDefinition.withClass(PersonListWireframe.self) {
+            (definition) in
+            
+            definition.injectProperty("listPresenter", with: self.personListPresenter())
         }
     }
     
     dynamic func personListInteractor() -> AnyObject {
         return TyphoonDefinition.withClass(PersonListInteractor.self) {
             (definition) in
+            
             definition.useInitializer("initWithDataStore:") {
                 (initializer) in
+                
                 initializer.injectParameterWith(self.personDataStore())
             }
+            
+            definition.injectProperty("delegate", with: self.personListPresenter())
         }
     }
+    
+    dynamic func personListPresenter() -> AnyObject {
+        return TyphoonDefinition.withClass(PersonListPresenter.self) {
+            (definition) in
+            definition.injectProperty("interactor", with: self.personListInteractor())
+            definition.injectProperty("listWireframe", with: self.personListWireframe())
+        }
+    }
+    
+    // MARK: - Person Detail Module
     
     dynamic func personDetailInteractor() -> AnyObject {
         return TyphoonDefinition.withClass(PersonDetailInteractor.self) {
@@ -47,6 +76,8 @@ class ApplicationAssembly: TyphoonAssembly {
             }
         }
     }
+    
+    // MARK: - Core Data
     
     dynamic func personDataStore() -> AnyObject {
         return TyphoonDefinition.withClass(PersonCoreDataStore.self)
