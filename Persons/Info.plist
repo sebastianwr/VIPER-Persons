@@ -39,6 +39,8 @@
 	<key>TyphoonInitialAssemblies</key>
 	<array>
 		<string>ApplicationAssembly</string>
+		<string>PersonListAssembly</string>
+		<string>PersonDetailAssembly</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

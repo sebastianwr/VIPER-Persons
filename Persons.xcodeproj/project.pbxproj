@@ -36,6 +36,8 @@
 		DA102F2919F9036C0042DBBF /* PersonCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2819F9036C0042DBBF /* PersonCoreDataStore.swift */; };
 		DA102F2B19F91E9B0042DBBF /* PersonListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2A19F91E9B0042DBBF /* PersonListInteractorIO.swift */; };
 		DA102F2D19F9204E0042DBBF /* PersonDetailInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA102F2C19F9204E0042DBBF /* PersonDetailInteractorIO.swift */; };
+		DA12B7161A01150B00B48F9A /* PersonListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12B7151A01150B00B48F9A /* PersonListAssembly.swift */; };
+		DA12B7181A01152B00B48F9A /* PersonDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12B7171A01152B00B48F9A /* PersonDetailAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		DA102F2819F9036C0042DBBF /* PersonCoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCoreDataStore.swift; sourceTree = "<group>"; };
 		DA102F2A19F91E9B0042DBBF /* PersonListInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListInteractorIO.swift; sourceTree = "<group>"; };
 		DA102F2C19F9204E0042DBBF /* PersonDetailInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailInteractorIO.swift; sourceTree = "<group>"; };
+		DA12B7151A01150B00B48F9A /* PersonListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListAssembly.swift; sourceTree = "<group>"; };
+		DA12B7171A01152B00B48F9A /* PersonDetailAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailAssembly.swift; sourceTree = "<group>"; };
 		E6928C8C1DED89665480B7B2 /* Pods-Persons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Persons.release.xcconfig"; path = "Pods/Target Support Files/Pods-Persons/Pods-Persons.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				5613B3C019FC0A590093D197 /* ApplicationAssembly.swift */,
+				DA12B7151A01150B00B48F9A /* PersonListAssembly.swift */,
+				DA12B7171A01152B00B48F9A /* PersonDetailAssembly.swift */,
 			);
 			name = Assembly;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				DA102F0A19F809770042DBBF /* PersonDetailViewController.swift in Sources */,
 				DA102F1219F809770042DBBF /* PersonListViewController.swift in Sources */,
 				DA102F0B19F809770042DBBF /* PersonDetailViewModel.swift in Sources */,
+				DA12B7181A01152B00B48F9A /* PersonDetailAssembly.swift in Sources */,
 				DA102EF719F8079A0042DBBF /* RootWireframe.swift in Sources */,
 				DA102F1119F809770042DBBF /* PersonListPresenter.swift in Sources */,
 				DA102F2719F900A60042DBBF /* PersonDataStore.swift in Sources */,
@@ -482,6 +489,7 @@
 				DA102F2B19F91E9B0042DBBF /* PersonListInteractorIO.swift in Sources */,
 				DA102F2319F8F7C70042DBBF /* NSDateConvenience.swift in Sources */,
 				DA102F2D19F9204E0042DBBF /* PersonDetailInteractorIO.swift in Sources */,
+				DA12B7161A01150B00B48F9A /* PersonListAssembly.swift in Sources */,
 				DA102F0E19F809770042DBBF /* PersonListDisplayData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
