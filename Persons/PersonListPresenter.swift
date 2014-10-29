@@ -11,9 +11,9 @@ import UIKit
 
 class PersonListPresenter: NSObject, PersonListInteractorOutput {
     
-    var interactor : PersonListInteractor?
-    weak var listWireframe : PersonListWireframe?
-    weak var userInterface : PersonListViewController?
+    var interactor: PersonListInteractor?
+    weak var listWireframe: PersonListWireframe?
+    weak var userInterface: PersonListViewController?
     
     func updateView() {
         self.interactor?.findAllPersons()
@@ -59,7 +59,7 @@ class PersonListPresenter: NSObject, PersonListInteractorOutput {
     }
     
     func handleCellSelection(person: PersonListViewModel) {
-        self.listWireframe?.presentPersonDetailWireframe(person.id, navigationController: self.userInterface?.navigationController)
+        self.listWireframe?.presentPersonDetailWireframe(person.id)
     }
     
     

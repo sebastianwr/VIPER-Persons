@@ -27,7 +27,23 @@ class ApplicationAssembly: TyphoonAssembly {
     dynamic func rootWireframe() -> AnyObject {
         return TyphoonDefinition.withClass(RootWireframe.self)
     }
+    
+    dynamic func mainStoryboard() -> AnyObject {
+        return TyphoonDefinition.withClass(TyphoonStoryboard.self) {
+            (definition) in
+            
+            definition.useInitializer("storyboardWithName:factory:bundle:") {
+                (initializer) in
+                
+                initializer.injectParameterWith("Main")
+                initializer.injectParameterWith(self)
+                initializer.injectParameterWith(NSBundle.mainBundle())
+            }
 
+            definition.scope = TyphoonScope.Singleton
+        }
+    }
+    
     // MARK: - Core Data
     
     dynamic func personDataStore() -> AnyObject {
