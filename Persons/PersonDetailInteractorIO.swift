@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol PersonDetailInteractorInput : class {
+@objc protocol PersonDetailInteractorInput : class {
     func findPersonForId(id: String)
 }
 
-protocol PersonDetailInteractorOutput : class {
+@objc protocol PersonDetailInteractorOutput : class {
     func foundPerson(person: Person)
 }

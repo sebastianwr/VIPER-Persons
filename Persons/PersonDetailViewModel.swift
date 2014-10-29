@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PersonDetailViewModel : NSObject {
+class PersonDetailViewModel {
     
     var name : String
     var image : UIImage

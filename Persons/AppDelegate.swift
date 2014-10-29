@@ -15,15 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var appDependencies: AppDependencies?
+    
+    var personListWireframe: PersonListWireframe?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        appDependencies?.installRootViewControllerIntoWindow(window!)
+        appDependencies?.initialSetup()
+        
+        self.installRootViewControllerIntoWindow(window!)
         
         return true
     }
     
     func applicationWillTerminate(application: UIApplication) {
         MagicalRecord.cleanUp()
+    }
+    
+    func installRootViewControllerIntoWindow(window: UIWindow) {
+        personListWireframe!.presentListInterfaceFromWindow(window)
     }
 }

@@ -11,50 +11,16 @@ import UIKit
 
 class AppDependencies: NSObject {
     
-
-    var detailWireframe = PersonDetailWireframe()
-    
-    var personDataStore: PersonDataStore?
-    
-    var personListInteractor: PersonListInteractor?
-    var personListWireframe: PersonListWireframe?
-    var personListPresenter: PersonListPresenter?
-
-    var personDetailInteractor: PersonDetailInteractor?
-    
     func initialSetup() {
         initCoreData()
         initCoreDataSeed()
-        configureDependencies()
     }
-    
-    func installRootViewControllerIntoWindow(window: UIWindow) {
-        personListWireframe!.presentListInterfaceFromWindow(window)
-    }
-    
-    func configureDependencies() {
-        
-        let rootWireframe = RootWireframe()
-        
-        personListWireframe!.rootWireframe = rootWireframe
-        personListWireframe!.detailWireframe = detailWireframe
-        
-        let personDetailPresenter = PersonDetailPresenter()
-        personDetailInteractor!.delegate = personDetailPresenter
-        personDetailPresenter.interactor = personDetailInteractor!
-        
-        detailWireframe.presenter = personDetailPresenter
-        
-    }
-    
-    // MARK: - Core Data Stack
     
     func initCoreData() {
         MagicalRecord.setupCoreDataStack()
     }
     
     func initCoreDataSeed() {
-        
         
         let personCount = ManagedPerson.MR_countOfEntities()
         
