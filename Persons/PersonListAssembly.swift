@@ -32,7 +32,7 @@ class PersonListAssembly: TyphoonAssembly {
                 (initializer) in
                 
                 initializer.injectParameterWith(self.applicationAssembly.personDataStore())
-            }ç
+            }
             
             definition.injectProperty("delegate", with: self.personListPresenter())
         }
