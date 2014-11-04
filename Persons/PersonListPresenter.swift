@@ -11,7 +11,7 @@ import UIKit
 
 class PersonListPresenter: NSObject, PersonListInteractorOutput {
     
-    var interactor: PersonListInteractor?
+    var interactor: PersonListInteractorInput?
     weak var listWireframe: PersonListWireframe?
     weak var userInterface: PersonListViewController?
     
