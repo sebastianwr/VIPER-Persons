@@ -22,7 +22,6 @@ class PersonDetailWireframe : NSObject {
         
         let newViewController = detailViewController!
         let view = newViewController.view
-        newViewController.presenter = presenter
         
         presenter?.configureViewForPersonWithId(newViewController, id: personId)
         

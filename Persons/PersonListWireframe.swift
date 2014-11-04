@@ -21,10 +21,6 @@ class PersonListWireframe : NSObject {
     var detailWireframe : PersonDetailWireframe?
     
     func presentListInterfaceFromWindow(window: UIWindow) {
-        listViewController?.presenter = listPresenter // TODO Move this to assembly
-        
-        // TODO this should not be necessary (see PersonListAssembly)
-        //listPresenter?.userInterface = listViewController
         rootWireframe?.showRootViewController(listViewController!, inWindow: window)
     }
     

@@ -42,7 +42,6 @@ class PersonListAssembly: TyphoonAssembly {
         return TyphoonDefinition.withClass(PersonListPresenter.self) {
             (definition) in
             
-            // TODO This injection does not work :( (see https://github.com/typhoon-framework/Typhoon/issues/268)
             definition.injectProperty("userInterface", with: self.personListViewController())
             
             definition.injectProperty("interactor", with: self.personListInteractor())
