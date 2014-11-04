@@ -16,9 +16,11 @@ class PersonDetailWireframe : NSObject {
     var presenter : PersonDetailPresenter?
     var navigationController : UINavigationController?
     
+    var detailViewController: PersonDetailViewController?
+    
     func presentDetailView(personId: String, viewController: UINavigationController) {
         
-        let newViewController = detailViewController()
+        let newViewController = detailViewController!
         let view = newViewController.view
         newViewController.presenter = presenter
         
@@ -28,15 +30,4 @@ class PersonDetailWireframe : NSObject {
         
     }
     
-    
-    func detailViewController() -> PersonDetailViewController {
-        let storyboard = mainStoryboard()
-        let detailViewController: PersonDetailViewController = storyboard.instantiateViewControllerWithIdentifier(PersonDetailViewControllerIdentifier) as PersonDetailViewController
-        return detailViewController
-    }
-    
-    func mainStoryboard() -> UIStoryboard {
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        return storyboard
-    }
 }

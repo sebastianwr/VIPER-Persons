@@ -17,6 +17,7 @@ class PersonDetailAssembly: TyphoonAssembly {
             (definition) in
             
             definition.injectProperty("presenter", with: self.personDetailPresenter())
+            definition.injectProperty("detailViewController", with: self.personDetailViewController())
         }
     }
     
@@ -39,7 +40,22 @@ class PersonDetailAssembly: TyphoonAssembly {
             (definition) in
             
             definition.injectProperty("interactor", with: self.personDetailInteractor())
+            definition.injectProperty("userInterface", with: self.personDetailViewController())
         }
+    }
+    
+    dynamic func personDetailViewController() -> AnyObject {
+        return TyphoonDefinition.withClass(PersonDetailViewController.self) {
+            (definition) in
+            
+            definition.factory = self.applicationAssembly.mainStoryboard()
+            definition.useInitializer("instantiateViewControllerWithIdentifier:", parameters: { (factoryMethod) in
+                factoryMethod.injectParameterWith(PersonDetailViewControllerIdentifier)
+            })
+            
+            definition.injectProperty("presenter", with: self.personDetailPresenter())
+        }
+        
     }
     
 }

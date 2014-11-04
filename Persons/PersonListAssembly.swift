@@ -32,7 +32,7 @@ class PersonListAssembly: TyphoonAssembly {
                 (initializer) in
                 
                 initializer.injectParameterWith(self.applicationAssembly.personDataStore())
-            }
+            }ç
             
             definition.injectProperty("delegate", with: self.personListPresenter())
         }
@@ -41,23 +41,29 @@ class PersonListAssembly: TyphoonAssembly {
     dynamic func personListPresenter() -> AnyObject {
         return TyphoonDefinition.withClass(PersonListPresenter.self) {
             (definition) in
-
+            
             // TODO This injection does not work :( (see https://github.com/typhoon-framework/Typhoon/issues/268)
             definition.injectProperty("userInterface", with: self.personListViewController())
             
             definition.injectProperty("interactor", with: self.personListInteractor())
             definition.injectProperty("listWireframe", with: self.personListWireframe())
-
+            
         }
     }
     
     dynamic func personListViewController() -> AnyObject {
         
-        return TyphoonDefinition.withFactory(self.applicationAssembly.mainStoryboard(), selector: "instantiateViewControllerWithIdentifier:", parameters: {
-            (factoryMethod) in
+        return TyphoonDefinition.withClass(PersonListViewController.self) {
+            (definition) in
             
-            factoryMethod.injectParameterWith("PersonListViewController")
-        })
+            definition.factory = self.applicationAssembly.mainStoryboard()
+            definition.useInitializer("instantiateViewControllerWithIdentifier:", parameters: { (factoryMethod) in
+                
+                factoryMethod.injectParameterWith("PersonListViewController")
+            })
+            
+            definition.injectProperty("presenter", with: self.personListPresenter())
+        }
     }
     
     

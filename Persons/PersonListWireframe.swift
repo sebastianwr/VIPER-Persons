@@ -24,7 +24,7 @@ class PersonListWireframe : NSObject {
         listViewController?.presenter = listPresenter // TODO Move this to assembly
         
         // TODO this should not be necessary (see PersonListAssembly)
-        listPresenter?.userInterface = listViewController
+        //listPresenter?.userInterface = listViewController
         rootWireframe?.showRootViewController(listViewController!, inWindow: window)
     }
     
