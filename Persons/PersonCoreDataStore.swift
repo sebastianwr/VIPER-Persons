@@ -11,7 +11,7 @@ import Foundation
 class PersonCoreDataStore: NSObject, PersonDataStore {
 
     func findPersonWithId(remoteId: String, completionBlock: ((Person) -> Void)!) {
-        let results = ManagedPerson.MR_findByAttribute("remoteId", withValue: remoteId) as [ManagedPerson]
+        let results = ManagedPerson.MR_findByAttribute("remoteId", withValue: remoteId) as! [ManagedPerson]
         let result = results.last
         
         if(result != nil) {
@@ -22,7 +22,7 @@ class PersonCoreDataStore: NSObject, PersonDataStore {
     }
     
     func findAll(completionBlock: (([Person]) -> Void)!) {
-        let results = ManagedPerson.MR_findAll() as [ManagedPerson]
+        let results = ManagedPerson.MR_findAll() as! [ManagedPerson]
         
         let persons = self.personsFromDataStoreEntries(results)
         completionBlock(persons)

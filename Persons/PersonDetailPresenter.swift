@@ -22,7 +22,7 @@ class PersonDetailPresenter : NSObject, PersonDetailInteractorOutput {
     func foundPerson(person: Person) {
         
         let url = NSURL(string: person.photoUrl)!
-        let data = NSData(contentsOfURL: url, options: nil, error: nil)!
+        let data = try! NSData(contentsOfURL: url, options: [])
         let image = UIImage(data: data)!
         
         let localizedBirthday = NSDateFormatter.localizedStringFromDate(person.birthday, dateStyle: NSDateFormatterStyle.LongStyle, timeStyle: NSDateFormatterStyle.NoStyle)

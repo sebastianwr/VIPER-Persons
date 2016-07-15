@@ -51,8 +51,8 @@ class PersonListViewController : UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
-        cell.imageView.image = personItem.image
-        cell.textLabel.text = personItem.name
+        cell.imageView!.image = personItem.image
+        cell.textLabel!.text = personItem.name
         cell.detailTextLabel!.text = personItem.detailInformation
         
         return cell
