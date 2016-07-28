@@ -10,7 +10,7 @@ import Foundation
 
 struct PersonListDisplayData {
     
-    let sections : [PersonListDisplaySection] = []
+    let sections : [PersonListDisplaySection]
     
     init(sections: [PersonListDisplaySection]) {
         self.sections = sections

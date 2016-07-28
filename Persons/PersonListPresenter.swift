@@ -30,12 +30,12 @@ class PersonListPresenter: NSObject, PersonListInteractorOutput {
             
             // TODO Image loading is nothing the presenter should be concerned of ... but where to put it?
             let url = NSURL(string: person.photoUrl)!
-            let data = NSData(contentsOfURL: url, options: nil, error: nil)!
+            let data = try! NSData(contentsOfURL: url, options: [])
             let image = UIImage(data: data)!
 
             let personListViewModel = PersonListViewModel(id: person.remoteId, name: person.firstName + " " + person.lastName, detailInformation: person.occupation, image: image)
             
-            let firstLetter = person.lastName.substringToIndex(advance(person.lastName.startIndex, 1))
+            let firstLetter = person.lastName.substringToIndex(person.lastName.startIndex.advancedBy(1))
             if var existingSection : [PersonListViewModel] = sectionsDict[firstLetter] {
                 existingSection.append(personListViewModel)
                 sectionsDict[firstLetter] = existingSection
@@ -49,7 +49,7 @@ class PersonListPresenter: NSObject, PersonListInteractorOutput {
         
         // Step 2 - Create display data struct for the view controller to handle easily
         
-        for key in Array(sectionsDict.keys).sorted(<) {
+        for key in Array(sectionsDict.keys).sort(<) {
             let section = PersonListDisplaySection(name: key, items: sectionsDict[key])
             sections.append(section)
         }

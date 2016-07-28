@@ -9,7 +9,7 @@
 import Foundation
 
 struct PersonListDisplaySection {
-    let name : String = ""
+    let name : String
     var items : [PersonListViewModel] = []
     
     init(name: String, items: [PersonListViewModel]?) {
